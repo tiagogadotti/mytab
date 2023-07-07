@@ -1,4 +1,4 @@
-#MyTab
+**MyTab**
 
 
 
@@ -14,15 +14,15 @@ This project makes use of the following technologies:
 
 
 
-*Spring Boot*: Used for creating the RESTful APIs and handling the business logic of the application. Spring Boot's embedded Tomcat server allows this application to be a standalone service.
+**Spring Boot**: Used for creating the RESTful APIs and handling the business logic of the application. Spring Boot's embedded Tomcat server allows this application to be a standalone service.
 
 
 
-*Spring Data JPA*: Utilized to simplify the data access layer. It provides helpful methods out of the box to interact with our PostgreSQL database.
+**Spring Data JPA**: Utilized to simplify the data access layer. It provides helpful methods out of the box to interact with our PostgreSQL database.
 
 
 
-*PostgreSQL*: An advanced open-source relational database. The project uses PostgreSQL for data persistence, ensuring that the state of the application is saved even after a system restart.
+**PostgreSQL**: An advanced open-source relational database. The project uses PostgreSQL for data persistence, ensuring that the state of the application is saved even after a system restart.
 
 
 
