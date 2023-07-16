@@ -9,6 +9,7 @@ public class CustomerDTOWrapper {
 		dto.setName(customer.getName());
 		dto.setBirthDate(customer.getBirthDate());
 		dto.setPhones(customer.getPhones());
+		dto.setCpf(customer.getCpf());
 		return dto;	
 	}
 	
@@ -18,6 +19,7 @@ public class CustomerDTOWrapper {
 	    customer.setName(dto.getName());
 	    customer.setBirthDate(dto.getBirthDate());
 	    customer.setPhones(dto.getPhones());
+	    customer.setCpf(dto.getCpf());
 	    return customer;
 	}
 	

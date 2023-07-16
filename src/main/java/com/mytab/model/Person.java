@@ -6,25 +6,30 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name="person")
+@Inheritance(strategy=InheritanceType.JOINED)
 public abstract class Person {
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	
-	@OneToMany(mappedBy = "person")
-	private List<Phone> phone;
+	@OneToMany(mappedBy = "person", cascade=CascadeType.ALL)
+	private List<Phone> phones;
 	@Column(nullable = false)
 	private String name;
 	@Embedded
 	private CPF cpf;
 	private LocalDate birthDate;
+	@Column(nullable = false)
+	private boolean isActive;
 	
 	private LocalDateTime updatedAt;
 	@Column(nullable = true)
 	private LocalDateTime createdAt;
 	private Long updatedBy;
 	private Long createdBy;
-	@OneToMany
-	private List<Phone> phones;
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -32,10 +37,10 @@ public abstract class Person {
 		this.id = id;
 	}
 	public List<Phone> getPhone() {
-		return phone;
+		return phones;
 	}
-	public void setPhone(List<Phone> phone) {
-		this.phone = phone;
+	public void setPhone(List<Phone> phones) {
+		this.phones = phones;
 	}
 	public String getName() {
 		return name;
@@ -85,6 +90,13 @@ public abstract class Person {
 	public void setPhones(List<Phone> phones) {
 		this.phones = phones;
 	}
+	public boolean isActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+	
 	
 	
 }

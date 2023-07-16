@@ -10,6 +10,7 @@ public class CPF implements CheckDocument, CleanDocument{
 	@Column(name="cpf")
 	private String numero;
 
+	public CPF() {}
 	public CPF(String numero) {
 		this.numero = validarELimparCPF(numero);
 	}

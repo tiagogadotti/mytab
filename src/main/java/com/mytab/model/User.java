@@ -17,15 +17,45 @@ public class User  extends Person{
 	private List<Role> role;
 	private LocalDateTime lastAccessAt;
 	private LocalDateTime lastPasswordResetAt;
-	@Column(nullable = false)
-	private boolean isActive;
 	@Column(nullable = true)
 	private int accessAttemptCount;
-	@Column(nullable = true)
-	private LocalDateTime updatedAt;
-	@Column(nullable = true)
-	private LocalDateTime createdAt;
-	private Long updatedBy;
-	private Long createdBy;
+	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public List<Role> getRole() {
+		return role;
+	}
+	public void setRole(List<Role> role) {
+		this.role = role;
+	}
+	public LocalDateTime getLastAccessAt() {
+		return lastAccessAt;
+	}
+	public void setLastAccessAt(LocalDateTime lastAccessAt) {
+		this.lastAccessAt = lastAccessAt;
+	}
+	public LocalDateTime getLastPasswordResetAt() {
+		return lastPasswordResetAt;
+	}
+	public void setLastPasswordResetAt(LocalDateTime lastPasswordResetAt) {
+		this.lastPasswordResetAt = lastPasswordResetAt;
+	}
+	public int getAccessAttemptCount() {
+		return accessAttemptCount;
+	}
+	public void setAccessAttemptCount(int accessAttemptCount) {
+		this.accessAttemptCount = accessAttemptCount;
+	}
 	
 }

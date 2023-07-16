@@ -15,8 +15,7 @@ public class CustomerDTO {
 	private String name;
 	private CPF cpf;
 	private LocalDate birthDate;
-
-
+	
 
 	public Long getId() {
 		return id;
