@@ -3,8 +3,8 @@ package com.mytab.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mytab.Repository.*;
 import com.mytab.model.*;
+import com.mytab.repository.*;
 import com.mytab.DTO.*;
 import java.util.*;
 
@@ -28,7 +28,7 @@ public class CustomerService {
 		try {
 			Customer customer = CustomerDTOWrapper.getCustomer(customerDTO);
 			customer.setActive(true);
-			Customer existingCustomer = (Customer)repository.findByCpf(customerDTO.getCpf());
+			Customer existingCustomer = repository.findByCpf(customerDTO.getCpf());
 			if (existingCustomer == null) {
 				repository.save(customer);
 			} else {

@@ -1,4 +1,4 @@
-package com.mytab.Repository;
+package com.mytab.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
